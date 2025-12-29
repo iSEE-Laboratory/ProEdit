@@ -1,6 +1,6 @@
 <h1>ProEdit: Inversion-based Editing From Prompts Done Right</h1>
 
-[![ProEdit(Arxiv)](https://img.shields.io/badge/arXiv-ProEdit-b31b1b.svg)](https://arxiv.org/abs/2503.21755) [![Project Page](https://img.shields.io/badge/Project-Page-green)](https://vchitect.github.io/VBench-2.0-project/)
+[![ProEdit(Arxiv)](https://img.shields.io/badge/arXiv-ProEdit-b31b1b.svg)](https://arxiv.org/abs/2512.22118) [![Project Page](https://img.shields.io/badge/Project-Page-green)](https://isee-laboratory.github.io/ProEdit/)
 
 This repository contains the implementation of the following paper.
 > **ProEdit: Inversion-based Editing From Prompts Done Right**<br>
