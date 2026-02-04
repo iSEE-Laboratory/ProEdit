@@ -1,0 +1,14 @@
+python edit.py  --source_prompt 'A cat wearing a chef hat and a white chef coat, standing in a kitchen and chopping broccoli on a wooden cutting board.' \
+                --target_prompt 'A dog wearing a chef hat and a white chef coat, standing in a kitchen and chopping broccoli on a wooden cutting board.' \
+                --source_img_dir 'examples/source/cat.jpg' \
+                --output_dir examples/edit-result/ \
+                --sampling_solver 'fireflow' \
+                --offload \
+                --num_steps 15 \
+                --name 'flux-dev' \
+                --guidance 2 \
+                --inject 5 \
+                --edit_object 'cat' \
+                --edit_type 'change' \
+                --kv_mix_ratio 0.9 \
+                --ls_ratio 0.25 \

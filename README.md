@@ -11,6 +11,7 @@ This repository contains the implementation of the following paper.
 - [:mega: Overview](#mega-overview)
 - [📋 ToDo List](#-todo-list)
 - [📖 Pipeline](#-pipeline)
+- [🖼️ Code for Image Editing](#️-code-for-image-editing)
 - [✨ Text-driven Image / Video Editing](#-text-driven-image--video-editing)
   - [🎨 Image Editing](#-image-editing)
   - [🎥 Video Editing](#-video-editing)
@@ -26,12 +27,17 @@ This repository contains the implementation of the following paper.
 <b>Overview of ProEdit.</b> We propose a highly accurate, plug-and-play editing method for flow inversion that addresses the problem of excessive source image information injection, which prevents proper modification of attributes such as pose, number, and color. Our method has demonstrated impressive performance in both image editing and video editing tasks.
 
 ## 📋 ToDo List
-- [ ] Release the code for image editing(in two weeks)
+- [x] Release the code for image editing
 - [ ] Release the code for video editing
 
 ## 📖 Pipeline
 ![pipeline](./images/pipeline.jpg)
 <b>Pipeline of our ProEdit. </b>The mask extraction module identifies the edited region based on source and target prompts during the first inversion step. After obtaining the inverted noise, we apply Latents-Shift to perturb the initial distribution in the edited region, reducing source image information. In selected sampling steps, we fuse source and target attention features in the edited region while directly injecting source features in non-edited regions to achieve accurate attribute editing and background preservation simultaneously.
+
+## 🖼️ Code for Image Editing
+For image editing, ProEdit employs FLUX as the backbone, and has been adapted to support four sampling solvers: Vanilla Flow, RF-Solver, Fireflow and UniEdit-Flow.
+
+<strong>We have provided the code and demo for image editing using FLUX as the backbone, which can be found <a href="./Image_Edit_FLUX">Here</a>.</strong>
 
 ## ✨ Text-driven Image / Video Editing
 More results can be found in our project page.
@@ -47,14 +53,11 @@ With the assistance of a large language model, our method can directly perform e
 ## ✒️ Citation
 If you find our repo useful for your research, please consider citing our paper:
 ```bibtex
-@misc{ouyang2025proedit,
-      title={ProEdit: Inversion-based Editing From Prompts Done Right}, 
-      author={Zhi Ouyang and Dian Zheng and Xiao-Ming Wu and Jian-Jian Jiang and Kun-Yu Lin and Jingke Meng and Wei-Shi Zheng},
-      year={2025},
-      eprint={2512.22118},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2512.22118}
+@article{ouyang2025proedit,
+  title={ProEdit: Inversion-based Editing From Prompts Done Right},
+  author={Ouyang, Zhi and Zheng, Dian and Wu, Xiao-Ming and Jiang, Jian-Jian and Lin, Kun-Yu and Meng, Jingke and Zheng, Wei-Shi},
+  journal={arXiv preprint arXiv:2512.22118},
+  year={2025}
 }
 ```
 
@@ -62,4 +65,4 @@ If you find our repo useful for your research, please consider citing our paper:
 <!-- **ProEdit** is currently maintained by [Zhi Ouyang](https://github.com/ouyangzhi1) and [Dian Zheng](https://zhengdian1.github.io/).
 #### :hugs: Open-Sourced Repositories -->
 We sincerely thank [FireFlow](https://github.com/HolmesShuan/FireFlow-Fast-Inversion-of-Rectified-Flow-for-Image-Semantic-Editing), [RF-Solver](https://github.com/wangjiangshan0725/RF-Solver-Edit), [UniEdit-Flow](https://github.com/DSL-Lab/UniEdit-Flow/tree/main) and [FLUX](https://github.com/black-forest-labs/flux) for their awesome work!
-Additionally, we would also like to thank [Pnp-Inversion](https://github.com/cure-lab/PnPInversion) for providing comprehensive baseline survey and implementations, as well as their great benchmark.
+Additionally, we would also like to thank [PnP-Inversion](https://github.com/cure-lab/PnPInversion) for providing comprehensive baseline survey and implementations, as well as their great benchmark.

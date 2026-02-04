@@ -1,0 +1,15 @@
+python edit.py  --source_prompt "a girl with a red hat and red t-shirt is sitting in a park, best quality" \
+                --target_prompt "a girl with a yellow hat and red t-shirt is sitting in a park, best quality" \
+                --source_img_dir 'examples/source/hat.jpg' \
+                --output_dir examples/edit-result/ \
+                --sampling_solver 'uniedit' \
+                --alpha 0.8 \
+                --omega 5.0 \
+                --num_steps 15 \
+                --name 'flux-dev' \
+                --guidance 2 \
+                --inject 2 \
+                --edit_object 'hat' \
+                --edit_type 'change' \
+                --kv_mix_ratio 0.9 \
+                --ls_ratio 0.25 \

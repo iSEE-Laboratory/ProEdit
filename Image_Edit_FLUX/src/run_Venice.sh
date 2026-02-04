@@ -1,0 +1,14 @@
+python edit.py  --source_prompt "A young woman is holding a wooden sign with the words ' Venice is awesome ' written in elegant cursive." \
+                --target_prompt "A young woman is holding a wooden sign with the words ' ProEdit is awesome ' written in elegant cursive." \
+                --source_img_dir 'examples/source/Venice.jpg' \
+                --output_dir examples/edit-result/ \
+                --sampling_solver 'fireflow' \
+                --offload \
+                --num_steps 15 \
+                --name 'flux-dev' \
+                --guidance 2 \
+                --inject 5 \
+                --edit_object 'Venice' \
+                --edit_type 'change' \
+                --kv_mix_ratio 0.9 \
+                --ls_ratio 0.25 \

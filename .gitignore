@@ -1,0 +1,9 @@
+# Ignore Python cache files
+**/__pycache__/
+
+# Ignore result images and examples
+Image_Edit_FLUX/src/examples/edit-result/
+Image_Edit_FLUX/src/result/
+
+# Ignore egg-info directory
+Image_Edit_FLUX/src/ProEdit.egg-info
