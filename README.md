@@ -20,6 +20,7 @@ This repository contains the implementation of the following paper.
 - [:hearts: Acknowledgement](#hearts-acknowledgement)
 
 ## :fire: Updates
+- **[2026.2.5]** The code for Image Editing is released.
 - **[2025.12.28]** The paper **ProEdit** is released on arXiv. 🚀
 
 ## :mega: Overview
